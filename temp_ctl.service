@@ -1,0 +1,13 @@
+[Unit]
+Description=Temperature Control 
+After=syslog.target
+ 
+[Service]
+Type=simple
+ExecStart=/usr/bin/temp_ctl
+KillMode=process
+Restart=on-failure
+ 
+ 
+[Install]
+WantedBy=multi-user.target
